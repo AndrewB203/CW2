@@ -1,0 +1,3 @@
+/home/andrew/AndrewB203/workspacenew/CW2/build/CMakeFiles/MyExecutable.dir
+/home/andrew/AndrewB203/workspacenew/CW2/build/CMakeFiles/edit_cache.dir
+/home/andrew/AndrewB203/workspacenew/CW2/build/CMakeFiles/rebuild_cache.dir

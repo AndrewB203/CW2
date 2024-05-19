@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/andrew/AndrewB203/workspacenew/CW2/third-party/gtest/googletest -I/home/andrew/AndrewB203/workspacenew/CW2/tests
+CXX_INCLUDES = -I/home/andrew/AndrewB203/workspacenew/CW2/tests/..
 
-CXX_FLAGS = 
+CXX_FLAGS = -DGTEST_HAS_PTHREAD=1 -std=gnu++11
 

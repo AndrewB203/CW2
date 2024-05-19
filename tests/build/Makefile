@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andrew/AndrewB203/workspacenew/CW2
+CMAKE_SOURCE_DIR = /home/andrew/AndrewB203/workspacenew/CW2/tests
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andrew/AndrewB203/workspacenew/CW2/build
+CMAKE_BINARY_DIR = /home/andrew/AndrewB203/workspacenew/CW2/tests/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrew/AndrewB203/workspacenew/CW2/build/CMakeFiles /home/andrew/AndrewB203/workspacenew/CW2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrew/AndrewB203/workspacenew/CW2/tests/build/CMakeFiles /home/andrew/AndrewB203/workspacenew/CW2/tests/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrew/AndrewB203/workspacenew/CW2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrew/AndrewB203/workspacenew/CW2/tests/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MyExecutable
+# Target rules for targets named FlyweightPatternTest
 
 # Build rule for target.
-MyExecutable: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyExecutable
-.PHONY : MyExecutable
+FlyweightPatternTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FlyweightPatternTest
+.PHONY : FlyweightPatternTest
 
 # fast build rule for target.
-MyExecutable/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/build
-.PHONY : MyExecutable/fast
+FlyweightPatternTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlyweightPatternTest.dir/build.make CMakeFiles/FlyweightPatternTest.dir/build
+.PHONY : FlyweightPatternTest/fast
 
-FlyweightPattern.o: FlyweightPattern.cpp.o
-.PHONY : FlyweightPattern.o
+FlyweightPatternTest.o: FlyweightPatternTest.cpp.o
+.PHONY : FlyweightPatternTest.o
 
 # target to build an object file
-FlyweightPattern.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/FlyweightPattern.cpp.o
-.PHONY : FlyweightPattern.cpp.o
+FlyweightPatternTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlyweightPatternTest.dir/build.make CMakeFiles/FlyweightPatternTest.dir/FlyweightPatternTest.cpp.o
+.PHONY : FlyweightPatternTest.cpp.o
 
-FlyweightPattern.i: FlyweightPattern.cpp.i
-.PHONY : FlyweightPattern.i
+FlyweightPatternTest.i: FlyweightPatternTest.cpp.i
+.PHONY : FlyweightPatternTest.i
 
 # target to preprocess a source file
-FlyweightPattern.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/FlyweightPattern.cpp.i
-.PHONY : FlyweightPattern.cpp.i
+FlyweightPatternTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlyweightPatternTest.dir/build.make CMakeFiles/FlyweightPatternTest.dir/FlyweightPatternTest.cpp.i
+.PHONY : FlyweightPatternTest.cpp.i
 
-FlyweightPattern.s: FlyweightPattern.cpp.s
-.PHONY : FlyweightPattern.s
+FlyweightPatternTest.s: FlyweightPatternTest.cpp.s
+.PHONY : FlyweightPatternTest.s
 
 # target to generate assembly for a file
-FlyweightPattern.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/FlyweightPattern.cpp.s
-.PHONY : FlyweightPattern.cpp.s
+FlyweightPatternTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FlyweightPatternTest.dir/build.make CMakeFiles/FlyweightPatternTest.dir/FlyweightPatternTest.cpp.s
+.PHONY : FlyweightPatternTest.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MyExecutable"
-	@echo "... FlyweightPattern.o"
-	@echo "... FlyweightPattern.i"
-	@echo "... FlyweightPattern.s"
+	@echo "... FlyweightPatternTest"
+	@echo "... FlyweightPatternTest.o"
+	@echo "... FlyweightPatternTest.i"
+	@echo "... FlyweightPatternTest.s"
 .PHONY : help
 
 

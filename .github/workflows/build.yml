@@ -2,40 +2,35 @@ name: C++ CI
 
 on:
   push:
-    branches: [ master]
-  pull_request:
     branches: [ master ]
+  pull_request:
+    branches: [ master ] 
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Install dependencies
-      run: sudo apt-get install g++ cmake libgtest-dev
-
-    - name: Build tests
       run: |
-        cd /usr/src/gtest
-        sudo cmake CMakeLists.txt
-        sudo make
-        sudo cp *.a /usr/lib
-        cd -
-        mkdir build
-        cd build
-        cmake .. -DBUILD_TESTS=ON
-        make
+        sudo apt-get update
+        sudo apt-get install cmake g++
 
-    - name: Run tests
-      run: ./check
+    - name: Configure CMake
+      run: cmake -S . -B build -DBUILD_TESTS=ON
+
+    - name: Build
+      run: cmake --build build --config Release
+
+    - name: Test
+      working-directory: build
+      run: ctest -C Release
       
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: MyExecutable
         path: build/MyExecutable
-      
-      

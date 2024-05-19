@@ -1,0 +1,3 @@
+/home/andrew/AndrewB203/workspacenew/CW2/tests/build/CMakeFiles/FlyweightPatternTest.dir
+/home/andrew/AndrewB203/workspacenew/CW2/tests/build/CMakeFiles/edit_cache.dir
+/home/andrew/AndrewB203/workspacenew/CW2/tests/build/CMakeFiles/rebuild_cache.dir

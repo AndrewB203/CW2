@@ -1,7 +1,10 @@
+// FlyweightPattern.h
+#ifndef FLYWEIGHT_PATTERN_H
+#define FLYWEIGHT_PATTERN_H
+
 #include <iostream>
 #include <string>
 #include <vector>
-
 
 using namespace std;
 
@@ -34,11 +37,7 @@ public:
 
 class FlyweightFactory {
 public:
-    int count ()
-    {
-    return _flys.size();
-	}
-    Flyweight* GetFlyweight(std::string key) {
+    Flyweight *GetFlyweight(std::string key) {
         for (auto fly : _flys) {
             if (fly->GetState() == key) {
                 cout << "already created by users..." << endl;
@@ -52,3 +51,5 @@ public:
 private:
     std::vector<Flyweight*> _flys;
 };
+
+#endif // FLYWEIGHT_PATTERN_H

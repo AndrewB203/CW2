@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ master ] 
 
 jobs:
   build:
@@ -19,11 +19,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install cmake g++
 
-    - name: Remove CMakeCache.txt
-      run: rm -f build/CMakeCache.txt
-
     - name: Configure CMake
-      run: cmake -S . -B build -DBUILD_TESTS=ON
+      run: cmake -H. -B build -DBUILD_TESTS=ON
 
     - name: Build
       run: cmake --build build --config Release
@@ -31,7 +28,6 @@ jobs:
     - name: Test
       working-directory: build
       run: ctest -C Release
-
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:

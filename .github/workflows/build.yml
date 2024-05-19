@@ -20,7 +20,7 @@ jobs:
         sudo apt-get install cmake g++
 
     - name: Configure CMake
-      run: cmake -H. -B build -DBUILD_TESTS=ON
+      run: cmake -S. -B build -DBUILD_TESTS=ON
 
     - name: Build
       run: cmake --build build --config Release
@@ -28,6 +28,7 @@ jobs:
     - name: Test
       working-directory: build
       run: ctest -C Release
+      
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:

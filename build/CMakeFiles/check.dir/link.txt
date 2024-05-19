@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/check.dir/FlyweightPattern.cpp.o CMakeFiles/check.dir/tests/test1.cpp.o -o check  -lRK lib/libgtest_main.a lib/libgtest.a 
